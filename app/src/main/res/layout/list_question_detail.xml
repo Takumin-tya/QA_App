@@ -37,6 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@id/imageView"
+        android:drawableLeft="@drawable/ic_grade_black_24dp"
         android:text="お気に入り"
         android:background="@color/notFavorite"
         android:id="@+id/favoriteButton"/>
