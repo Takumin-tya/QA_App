@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+// Add to the bottom of the file
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+
+    defaultConfig {
+        applicationId "jp.techacademy.takumi.fukushima.qa_app"
+        minSdkVersion 19
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.0'
+    compile 'com.android.support:design:24.2.0'
+    compile 'com.google.firebase:firebase-auth:9.0.1'
+    compile 'com.google.firebase:firebase-database:9.0.1'
+    compile 'com.beardedhen:androidbootstrap:2.3.0'
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "io.realm:realm-gradle-plugin:0.88.2"
+    }
+}
+
+apply plugin: 'realm-android'
