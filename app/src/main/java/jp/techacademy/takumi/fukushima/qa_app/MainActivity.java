@@ -50,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean favoriteFlag = false;
 
+    private NavigationView navigationView;
+    private Menu menu;
+
     private ChildEventListener mEventListener = new ChildEventListener() {
         @Override
         public void onChildAdded(DataSnapshot dataSnapshot, String s) {
@@ -189,7 +192,8 @@ public class MainActivity extends AppCompatActivity {
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        menu = navigationView.getMenu();
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
@@ -302,5 +306,23 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        SetView();
+    }
+
+    private void SetView(){
+        menu.clear();
+        navigationView.inflateMenu(R.menu.activity_main_drawer);
+
+        //ログイン済みのユーザーを収録する
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        if(user != null){
+            navigationView.inflateMenu(R.menu.activity_main_option_menu);
+        }
     }
 }

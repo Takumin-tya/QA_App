@@ -15,6 +15,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import io.realm.Realm;
 import io.realm.RealmResults;
 
@@ -113,6 +116,14 @@ public class QuestionDetailListAdapter extends BaseAdapter{
                     favoriteFlag = !favoriteFlag;
                 }
             });
+
+            //ログイン済みのユーザーを収録する
+            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            if(user == null){
+                favoriteButton.setVisibility(View.GONE);
+            }else{
+                favoriteButton.setVisibility(View.VISIBLE);
+            }
 
             TextView bodyTextView = (TextView) contentView.findViewById(R.id.bodyTextView);
             bodyTextView.setText(body);
