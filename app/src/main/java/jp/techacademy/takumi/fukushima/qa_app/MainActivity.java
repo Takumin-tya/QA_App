@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             String name = (String) map.get("name");
             String uid = (String) map.get("uid");
             String imageString = (String) map.get("image");
-            int genre = (int) map.get("genre");
+            int genre = Integer.parseInt((String) map.get("genre"));
             Bitmap image = null;
             byte[] bytes;
             if (imageString != null) {
