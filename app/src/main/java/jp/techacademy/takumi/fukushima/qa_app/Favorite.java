@@ -10,6 +10,15 @@ public class Favorite extends RealmObject implements Serializable {
 
     @PrimaryKey
     private String id;
+    int genre;
+
+    public int getGenre(){
+        return genre;
+    }
+
+    public void setGenre(int genre){
+        this.genre = genre;
+    }
 
     public String getId(){
         return id;

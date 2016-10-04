@@ -148,9 +148,9 @@ public class LoginActivity extends AppCompatActivity {
                 String password = mPasswordEditText.getText().toString();
                 String name = mNameEditText.getText().toString();
 
-                if (email.length() != 0 && password.length() >= 6){
-                    //フラグを落としておく
-                    mIsCreateAccount = false;
+                if (email.length() != 0 && password.length() >= 6 && name.length() != 0){
+                    //ログイン時に表示名を保存するようにフラグを立てる
+                    mIsCreateAccount = true;
 
                     createAccount(email, password);
                 }else{

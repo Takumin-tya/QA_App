@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if(realmResults.size() != 0){
                     Log.d("QA_Android","お気に入りを表示");
-                    Question question = new Question(title, body, name, uid, dataSnapshot.getKey(), mGenre, bytes, answerArrayList);
+                    Question question = new Question(title, body, name, uid, dataSnapshot.getKey(), realmResults.get(0).getGenre(), bytes, answerArrayList);
                     mQuestionArrayList.add(question);
                     mAdapter.notifyDataSetChanged();
                     Log.d("QA_Android", question.getQuestionUid());
