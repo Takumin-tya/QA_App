@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
             String name = (String) map.get("name");
             String uid = (String) map.get("uid");
             String imageString = (String) map.get("image");
+            int genre = (int) map.get("genre");
             Bitmap image = null;
             byte[] bytes;
             if (imageString != null) {
@@ -93,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if(realmResults.size() != 0){
                     Log.d("QA_Android","お気に入りを表示");
-                    Question question = new Question(title, body, name, uid, dataSnapshot.getKey(), realmResults.get(0).getGenre(), bytes, answerArrayList);
+                    Question question = new Question(title, body, name, uid, dataSnapshot.getKey(), genre, bytes, answerArrayList);
                     mQuestionArrayList.add(question);
                     mAdapter.notifyDataSetChanged();
                     Log.d("QA_Android", question.getQuestionUid());
