@@ -21,6 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 import io.realm.Realm;
 import io.realm.RealmResults;
 
+//コメント
 public class QuestionDetailListAdapter extends BaseAdapter{
     private final static int TYPE_QESTION = 0;
     private final static int TYPE_ANSWER = 1;

@@ -16,6 +16,7 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 import java.util.Objects;
 
+//コメント
 public class QuestionsListAdapter extends BaseAdapter{
     private LayoutInflater mLayoutInflater = null;
     private ArrayList<Question> mQuestionArrayList;

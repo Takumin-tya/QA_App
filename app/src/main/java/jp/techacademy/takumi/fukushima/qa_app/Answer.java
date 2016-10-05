@@ -9,6 +9,7 @@ public class Answer implements Serializable {
     private String mUid;
     private String mAnswerUid;
 
+    //コメント
     public Answer(String body, String name, String uid, String answerUid) {
         mBody = body;
         mName = name;

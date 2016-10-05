@@ -6,6 +6,7 @@ import java.io.Serializable;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
+//コメント
 public class Favorite extends RealmObject implements Serializable {
 
     @PrimaryKey

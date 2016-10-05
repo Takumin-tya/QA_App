@@ -4,6 +4,7 @@ package jp.techacademy.takumi.fukushima.qa_app;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+//コメント
 public class Question implements Serializable{
     private String mTitle;
     private String mBody;

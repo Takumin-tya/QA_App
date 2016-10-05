@@ -27,6 +27,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.HashMap;
 import java.util.Map;
 
+//コメント
 public class LoginActivity extends AppCompatActivity {
 
     EditText mEmailEditText;

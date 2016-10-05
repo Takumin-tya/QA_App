@@ -1,6 +1,6 @@
 package jp.techacademy.takumi.fukushima.qa_app;
 
-
+//コメント
 public class Const {
     public static final String UsersPATH = "users";    //Firebaseユーザーの表示名を保存するパス
     public static final String ContentsPATH = "contents";   //Firebaseに質問を保存するパス

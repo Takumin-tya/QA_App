@@ -19,6 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 
+//コメント
 public class QuestionDetailActivity extends AppCompatActivity {
 
     private ListView mListView;

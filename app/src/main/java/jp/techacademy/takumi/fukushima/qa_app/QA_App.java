@@ -6,6 +6,7 @@ import android.app.Application;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 
+//コメント
 public class QA_App extends Application {
     @Override
     public void onCreate(){

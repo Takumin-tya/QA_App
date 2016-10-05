@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean favoriteFlag = false;
 
+    //コメント
     private NavigationView navigationView;
     private Menu menu;
 

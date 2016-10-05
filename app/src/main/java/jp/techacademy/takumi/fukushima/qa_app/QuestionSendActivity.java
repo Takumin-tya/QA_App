@@ -40,6 +40,7 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
+//コメント
 public class QuestionSendActivity extends AppCompatActivity implements View.OnClickListener, DatabaseReference.CompletionListener{
 
     private static final int PERMISSION_REQUEST_CODE = 100;

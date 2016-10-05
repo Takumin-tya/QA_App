@@ -20,6 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 import java.util.Map;
 
+//コメント
 public class SettingActivity extends AppCompatActivity{
 
     DatabaseReference mDataBaseReference;
